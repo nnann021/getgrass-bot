@@ -3,12 +3,9 @@ const axios = require('axios');
 const fs = require('fs');
 
 const PROXY_SOURCES = {
-  'SERVER 1': 'https://files.ramanode.top/airdrop/grass/server_1.txt',
-  'SERVER 2': 'https://files.ramanode.top/airdrop/grass/server_2.txt',
-  'SERVER 3': 'https://files.ramanode.top/airdrop/grass/server_3.txt',
-  'SERVER 4': 'https://files.ramanode.top/airdrop/grass/server_4.txt',
-  'SERVER 5': 'https://files.ramanode.top/airdrop/grass/server_5.txt',
-  'SERVER 6': 'https://files.ramanode.top/airdrop/grass/server_6.txt',
+  'SERVER 1': 'https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text',
+  'SERVER 2': 'https://github.com/monosans/proxy-list/raw/main/proxies/all.txt',
+  'SERVER 3': 'https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&protocol=http&proxy_format=protocolipport&format=text&timeout=20000'
 };
 
 async function fetchProxies(url) {
